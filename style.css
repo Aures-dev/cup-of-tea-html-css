@@ -1,0 +1,346 @@
+/* _______Style global_______ */
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: rgb(242 242 242);
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 20px;
+}
+
+/* ________Classes generales________ */
+.invisible{
+    display: none;
+}
+.center{
+    text-align: center;
+}
+.green{
+    color: rgb(150 176 17);
+}
+.bgwhite{
+    background-color: white;
+}
+
+
+/* _______Style du header_______ */
+
+
+
+header{
+    background-image: url("./img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* _tout premier texte de la page en haut_ */
+.banner{
+    background-color: rgb(135 158 15);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: white;
+}
+/* _le style en coin droit en haut_ */
+.cart-icon{
+    display: flex;
+    width: 30%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+    color: white;
+}
+.cart-icon>.icone-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50%;
+}
+.icone-cart>img{
+    width: 40%;
+}
+/* _aerer le logo_ */
+header>img{
+    padding-inline: 15%;
+    padding-block: 1em;
+}
+/* _la navigation_ */
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em
+}
+ul>li{
+    padding: 0.5em;
+}
+li>a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    text-align: center;
+    width: 100%;
+    background-color: hsl(68.03deg 54.98% 45.29%);
+}
+
+
+
+/* _______Style du footer_______ */
+
+/*__organisation des icones et du texte en dessous avec grid et flex__ */
+.icon_section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    background-color: rgb(135 158 15);
+    color: white;
+}
+.icon_item1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon_item2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon_item3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon_item4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon_item5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+/*___ ajustement de certaines icones___ */
+.icone_footer{
+    width: 25%;
+}
+.icone_footer5{
+    width: 15%;
+}
+
+/* on centre les textes relatifs avec flex */
+.textes_relatif{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(150 176 17);
+    color: white;
+}
+
+
+
+/* style du home vue mobile*/
+
+.galerie-tea{
+    margin-bottom: 2em;
+}
+.tea_selection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.tea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trait_droit{
+    position: relative;
+    left: 38%;
+    bottom: 2em;
+    width: 16%;
+}
+.trait_gauche{
+    position: relative;
+    right: 38%;
+    top: 2.5em;
+    width: 16%;
+}
+.trait_droit2{
+    position: relative;
+    left: 46%;
+    bottom: 2.5em;
+    width: 20%;
+}
+.trait_gauche2{
+    position: relative;
+    right: 46%;
+    top: 3em;
+    width: 20%;
+}
+
+.home_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+button{
+    color: white;
+    background-color: rgb(177 144 105);
+    height: 4em;
+    border: none;
+    width: 45%;
+}
+
+
+
+
+
+/* modif en commun pour tablette et desktop */
+@media screen and (min-width:800px){
+
+    /* _______modif header________ */
+    /* on repositionne le panier du haut */
+    .cart-icon{
+        position: relative;
+        top: 5em;
+        left: 75%;
+        box-shadow: none;
+        border-radius: none;
+        /* width: 25%; */
+    }
+    .cart-icon>.icone-cart{
+        width: 20%;
+        margin-inline: 1em;
+    }
+    .icone-cart>img{
+        width: 50%;
+    }
+    /* on repositionne le logo */
+    .logo{
+        /* position: absolute; */
+        padding-left: 1em;
+    }
+    /* ici j'alligne la navigation */
+    ul{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    li:hover{
+        width: 15%;
+    }
+
+
+    /* ______modif main______ */
+
+    /* on fait apparaitre la première section */
+    .invisible{
+        display: block;
+    }
+    /* on centre la première image  */
+    .offre-noel{
+        width: 100%;
+    }
+    /* style du carrousel avec animation: ; */
+    .carrousel-box{
+        overflow: hidden;
+        width: 100%;
+        height: 477;
+    }
+    .carrousel{
+        border: none;
+        display: flex;
+        /* transition: all 5s; */
+        animation-name: carrousel;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .fix-image{
+        width: 100%;
+    }
+    @keyframes carrousel {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(-100%);
+        }
+    }
+
+
+    /* _____modif footer____ */
+
+    /* on aligne les icones */
+    .icon_section{
+        display: flex;
+        justify-content: space-around;
+    }
+    /* on aligne les textes relatifs */
+    .textes_relatif{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+
+/* ________style du HOME vue tablette_________ */
+
+@media screen and (min-width:800px) and (max-width:1080px) {
+    /* on reconfigure la galerie de tea */
+
+    .tea_selection{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+    .tea5{
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+
+}
+
+/* ________style du HOME vue desktop_________ */
+
+@media screen and (min-width:1080px) {
+    .home_product_section{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
